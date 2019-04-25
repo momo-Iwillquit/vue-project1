@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import Index from './views/index';
 import Demo1 from './views/demo1';
 import Demo2 from './views/demo2';
