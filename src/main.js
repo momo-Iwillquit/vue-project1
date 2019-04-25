@@ -1,11 +1,19 @@
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-import App from './App.vue';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
-Vue.use(ElementUI);
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+import App from './App.vue'
+import routes from './routers'
+
+const router = new VueRouter({
+	mode: 'hash',
+	routes,
+})
 
 new Vue({
-  el: '#app',
+  router,
   render: h => h(App)
-});
+}).$mount("#app")
