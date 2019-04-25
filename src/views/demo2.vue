@@ -60,6 +60,7 @@ export default {
     }
 }
 </script>
+
 <style lang="less" scoped>
     .text-center {
         text-align: center;
