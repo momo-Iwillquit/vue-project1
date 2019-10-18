@@ -119,6 +119,16 @@ export default {
 			this.value = '栋';
 			this.$nextTick(() => {
 				this.$refs.multipleTable.clearSelection();
+				
+				// 以下是默认选择第一个
+				this.selectedData = Data.slice(0, 1);
+				this.ap_list.forEach(row => {
+					if(this.selectedData[0].id == row.id){
+						this.$refs.multipleTable.toggleRowSelection(row,true);
+						return false;
+					}
+				})
+				
 			});
 		},
 	},
