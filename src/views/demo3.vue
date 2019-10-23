@@ -93,6 +93,9 @@ export default {
             this.dialogVisible = false;
         },
         showRow(row){
+            // 加上后面这句，可以防止当用户点击点击单选按钮radio时，方法被触发两次
+            event.preventDefault();
+            console.log('--click-row:',row)
             this.radio = this.tableData.indexOf(row);
             this.send_radio = row.id;
         },
